@@ -1,7 +1,14 @@
 package me.dungngminh.news_app
 
-interface Platform {
-    val name: String
-}
+expect class Platform {
 
-expect fun getPlatform(): Platform
+    val osName: String
+
+    val osVersion: String
+
+    val deviceModel: String
+
+    val density: Int
+
+    fun logSystemInfo()
+}
